@@ -17,4 +17,6 @@
       * node-ts
     * Mysql
 
-    ##  video:
+    ##  deploy:
+    [![TodoListCrud img](url to img)](url to a page)]
+

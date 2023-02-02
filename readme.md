@@ -18,5 +18,5 @@
     * Mysql
 
     ##  deploy:
-    [![TodoListCrud img](url to img)](url to a page)]
+    [![TodoListCrud img](https://github.com/Williansouzh/TodoList-crud-with-Node-Mysql-and-React-js/blob/main/TodoListCrud%20img.PNG)](https://youtu.be/_wqEm50aUMI)]
 

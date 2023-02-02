@@ -26,14 +26,14 @@ function App() {
       done: id.target.checked
     }
     await api.updateTask(task.id, task.done)
-    updateScreen()
+    setTasks(await api.seeAllTasks());
   }
   const addTask = async ()=>{
     await api.createTask(newTask).then(async()=>{
       setNewTask("");
       setTasks(await api.seeAllTasks())
-      updateScreen()
     })
+    updateScreen()
   }
   const seeAllTasks = async ()=>{
     await api.seeAllTasks().then(response=>setTasks(response)).then(()=>console.log(tasks))
@@ -49,7 +49,6 @@ function App() {
   const deleteTask = async (id:any)=>{
     api.deleteTask(id.target.id);
     setTasks(await api.seeAllTasks());
-    updateScreen()
   };
   return (
     <C.Container>

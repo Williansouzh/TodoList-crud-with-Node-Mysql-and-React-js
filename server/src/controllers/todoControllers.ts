@@ -52,7 +52,6 @@ export const updateTask =  async (req: Request, res: Response)=>{
     
     if(editTask){
         editTask.done = done
-        editTask.taskTitle = "updated"
         await editTask.save()
     }
     res.json({
@@ -61,11 +60,9 @@ export const updateTask =  async (req: Request, res: Response)=>{
 };  
 export const removeTask =  async (req: Request, res: Response)=>{
     let {id} = req.params;
-
     let delTask = await Task.destroy({
         where: {id:id}
     })
-
     res.json({
         delTask
     })
